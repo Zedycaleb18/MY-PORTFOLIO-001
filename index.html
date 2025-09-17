@@ -217,6 +217,59 @@ z-index: 2; /* Ensure content is above the overlay */
     position: absolute;
     left: 0;
 }
+  /* Media Queries for Responsiveness */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        gap: 0;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .content img,
+    .text-content {
+        min-width: 100%;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+    }
+}
 </style>
 <body>
   <header>
@@ -355,5 +408,6 @@ z-index: 2; /* Ensure content is above the overlay */
 </body>
 
 </html>
+
 
 
